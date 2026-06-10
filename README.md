@@ -92,13 +92,21 @@ Final GDSII Generation
 
 ## Repository Structure
 
-├── schematic/
-├── layout/
-├── simulations/
-├── verification/
-├── images/
-├── docs/
-└── README.md
+Schematic Design
+      ↓
+Pre-Layout Simulation
+      ↓
+Layout Design
+      ↓
+DRC / LVS
+      ↓
+PEX Extraction
+      ↓
+Post-Layout Verification
+      ↓
+Pad Ring Integration
+      ↓
+Final GDSII
 
 ## Disclaimer
 

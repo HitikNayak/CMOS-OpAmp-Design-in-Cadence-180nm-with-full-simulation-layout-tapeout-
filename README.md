@@ -69,7 +69,7 @@ Final GDSII Generation
 ![DRC](drc.png)
 
 ### LVS Matched
-![LVS](/LVS correct.png)
+![LVS](LVS correct.png)
 
 ## Tools
 

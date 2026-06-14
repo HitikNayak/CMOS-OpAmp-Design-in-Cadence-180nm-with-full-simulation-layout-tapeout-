@@ -56,14 +56,17 @@ Final GDSII Generation
 
 ## Layout Snapshots
 
-### Schematic
-![Schematic](schematic.png)
+### Test Bench
+![Test Bench](test_bench.png)
 
 ### Core Layout
 ![Core Layout](core_layout.png)
 
 ### Full Chip Layout
 ![Full Chip](full_chip.png)
+
+### Dummy
+![Dummy](dummy.png)
 
 ### DRC Clean
 ![DRC](drc.png)

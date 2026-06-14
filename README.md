@@ -63,7 +63,7 @@ Final GDSII Generation
 ![Core Layout](core_layout.png)
 
 ### Full Chip Layout
-![Full Chip](full_chip.png)
+![Full Chip](final_chip.png)
 
 ### Dummy
 ![Dummy](dummy.png)

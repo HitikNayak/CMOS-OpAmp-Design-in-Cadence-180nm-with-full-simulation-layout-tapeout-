@@ -68,7 +68,7 @@ Final GDSII Generation
 ### Dummy
 ![Dummy](dummy.png)
 
-### DRC Clean
+### DRC have only last error which is clear by dummy
 ![DRC](drc.png)
 
 ### LVS Matched

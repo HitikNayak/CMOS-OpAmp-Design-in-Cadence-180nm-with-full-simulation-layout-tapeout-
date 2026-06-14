@@ -57,19 +57,19 @@ Final GDSII Generation
 ## Layout Snapshots
 
 ### Schematic
-![Schematic](images/schematic.png)
+![Schematic](schematic.png)
 
 ### Core Layout
-![Core Layout](images/core_layout.png)
+![Core Layout](core_layout.png)
 
 ### Full Chip Layout
-![Full Chip](images/full_chip.png)
+![Full Chip](full_chip.png)
 
 ### DRC Clean
-![DRC](images/drc.png)
+![DRC](drc.png)
 
 ### LVS Matched
-![LVS](images/lvs.png)
+![LVS](/LVS correct.png)
 
 ## Tools
 

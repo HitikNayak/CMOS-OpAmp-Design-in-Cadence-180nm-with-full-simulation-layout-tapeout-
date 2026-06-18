@@ -1,0 +1,1484 @@
+
+
+
+                  ##################################################
+                  ##                                              ##
+                  ##         C A L I B R E    S Y S T E M         ##
+                  ##                                              ##
+                  ##             L V S   R E P O R T              ##
+                  ##                                              ##
+                  ##################################################
+
+
+
+REPORT FILE NAME:         core_with_IO.lvs.report
+LAYOUT NAME:              core_with_IO.sp ('core_with_IO')
+SOURCE NAME:              /home/project_staff/projects/test_proj/work_libs/project_staff/cds/CDL_File/Core_with_IOPad/Core_with_IOPad.cdl ('core_with_IO')
+RULE FILE:                _LVS.header_
+CREATION TIME:            Tue May 26 17:27:02 2026
+CURRENT DIRECTORY:        /home/project_staff/projects/test_proj/work_libs/project_staff/cds
+USER NAME:                project_staff
+CALIBRE VERSION:          v2022.4_37.20    Fri Dec 2 17:41:13 PST 2022
+
+
+
+                               OVERALL COMPARISON RESULTS
+
+
+
+                  #   #         #####################  
+                   # #          #                   #  
+                    #           #     INCORRECT     #  
+                   # #          #                   #  
+                  #   #         #####################  
+
+
+  Error:    Connectivity errors.
+  Error:    Property errors.
+  Warning:  Unbalanced smashed mosfets were matched.
+  Warning:  Ambiguity points were found and resolved arbitrarily.
+
+
+**************************************************************************************************************
+                                      CELL  SUMMARY
+**************************************************************************************************************
+
+  Result         Layout                        Source
+  -----------    -----------                   --------------
+  INCORRECT      core_with_IO                  core_with_IO
+
+
+
+**************************************************************************************************************
+                                      LVS PARAMETERS
+**************************************************************************************************************
+
+
+o LVS Setup:
+
+   // LVS COMPONENT TYPE PROPERTY
+   // LVS COMPONENT SUBTYPE PROPERTY
+   // LVS PIN NAME PROPERTY
+   LVS POWER NAME                         "VDD" "vdd" "VCC" "vcc" "VDDD" "VDD!" "vdd!" "VCC!" "vcc!" "AVDD" "DVDD"
+   LVS GROUND NAME                        "GND" "gnd" "VSS" "vss" "GNDD" "GND!" "gnd!" "VSS!" "vss!" "AVSS" "DVSS"
+   LVS CELL SUPPLY                        NO
+   LVS RECOGNIZE GATES                    ALL
+   // LVS HCELL REPORT
+   LVS IGNORE PORTS                       NO
+   LVS CHECK PORT NAMES                   YES
+   LVS IGNORE TRIVIAL NAMED PORTS         NO
+   LVS BUILTIN DEVICE PIN SWAP            YES
+   LVS ALL CAPACITOR PINS SWAPPABLE       NO
+   LVS DISCARD PINS BY DEVICE             NO
+   LVS SOFT SUBSTRATE PINS                NO
+   LVS INJECT LOGIC                       YES
+   LVS EXPAND UNBALANCED CELLS            YES
+   LVS FLATTEN INSIDE CELL                NO
+   LVS EXPAND SEED PROMOTIONS             NO
+   LVS PRESERVE PARAMETERIZED CELLS       NO
+   LVS GLOBALS ARE PORTS                  YES
+   LVS RELAX INITIAL CPOINTS              NONE
+   LVS REVERSE WL                         NO
+   // LVS NETLIST FILTER DEVICES          NO
+   // LVS PRESERVE BOX PORTS              NO
+   LVS SPICE PREFER PINS                  NO
+   LVS SPICE SLASH IS SPACE               YES
+   LVS SPICE ALLOW FLOATING PINS          YES
+   // LVS SPICE ALLOW INLINE PARAMETERS     
+   LVS SPICE ALLOW UNQUOTED STRINGS       NO
+   LVS SPICE CONDITIONAL LDD              NO
+   LVS SPICE CULL PRIMITIVE SUBCIRCUITS   NO
+   // LVS SPICE EXCLUDE CELL SOURCE
+   // LVS SPICE EXCLUDE CELL LAYOUT
+   LVS SPICE IMPLIED MOS AREA             NO
+   // LVS SPICE MULTIPLIER NAME
+   LVS SPICE OVERRIDE GLOBALS             NO
+   LVS SPICE REDEFINE PARAM               NO
+   LVS SPICE REPLICATE DEVICES            YES
+   LVS SPICE SCALE X PARAMETERS           NO
+   LVS SPICE STRICT WL                    NO
+   // LVS SPICE OPTION
+   LVS STRICT SUBTYPES                    NO
+   LVS EXACT SUBTYPES                     NO
+   LAYOUT CASE                            YES
+   SOURCE CASE                            YES
+   LVS COMPARE CASE                       NO
+   LVS COMPARE CASE STRICT                NO
+   LVS DOWNCASE DEVICE                    NO
+   LVS REPORT MAXIMUM                     ALL
+   LVS PROPERTY RESOLUTION MAXIMUM        32
+   // LVS SIGNATURE MAXIMUM
+   LVS FILTER UNUSED OPTION               AB RC RE RG
+   LVS REPORT OPTION                      A B C D FX G S V
+   LVS REPORT UNITS                       YES
+   LVS SWAPPABLE HCELL PINS               GENERAL
+   // LVS NON USER NAME PORT
+   // LVS NON USER NAME NET
+   // LVS NON USER NAME INSTANCE
+   // LVS IGNORE DEVICE PIN
+   // LVS PREFER NETS FILTER SOURCE
+   // LVS PREFER NETS FILTER LAYOUT
+   LVS PREFER PORT NETS                   NO
+   LVS EXPAND ON ERROR                    NO
+   LVS EXPAND AMBIGUOUSLY HIGH SHORTED HCELLS NO
+
+   // Reduction
+
+   LVS REDUCE SERIES MOS                  NO
+   LVS REDUCE PARALLEL MOS                YES
+   LVS REDUCE SEMI SERIES MOS             NO
+   LVS REDUCE SPLIT GATES                 YES
+   LVS REDUCE PARALLEL BIPOLAR            YES
+   LVS REDUCE SERIES CAPACITORS           NO
+   LVS REDUCE PARALLEL CAPACITORS         NO
+   LVS REDUCE SERIES RESISTORS            YES
+   LVS REDUCE PARALLEL RESISTORS          YES
+   LVS REDUCE PARALLEL DIODES             YES
+
+   LVS REDUCE  Q(VD)  PARALLEL
+   LVS REDUCE  Q(VD5)  PARALLEL
+   LVS REDUCE  Q(VD10)  PARALLEL
+   LVS REDUCE  Q(VH)  PARALLEL
+   LVS REDUCE  Q(VH5)  PARALLEL
+   LVS REDUCE  Q(VH10)  PARALLEL
+   LVS REDUCE  Q(VDN5)  PARALLEL
+   LVS REDUCE  C(CL)  PARALLEL
+   LVS REDUCE  C(CH)  PARALLEL
+   LVS REDUCE  C(CH3)  PARALLEL
+   LVS REDUCE  C(ch53t)  PARALLEL
+   LVS REDUCE  C(CL3)  PARALLEL
+   LVS REDUCE  C(CB)  PARALLEL
+   LVS REDUCE  C(cmim_hc)  PARALLEL
+   LVS REDUCE  C(cmim_uhd)  PARALLEL
+   LVS REDUCE  C(cmim_stk)  PARALLEL
+   LVS REDUCE  C(cmim_uhdstk)  PARALLEL
+   LVS REDUCE  D(W3)  PARALLEL NO
+   LVS REDUCE  D(DW)  PARALLEL NO
+   LVS REDUCE  MN(NH)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MN(N5)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MN(N)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MN(n18hvt)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MN(n18lvt)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MP(P)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MP(p18hvt)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MP(p18lvt)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MP(PH)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCE  MP(P5)  PARALLEL [ TOLERANCE rf_flag 0 ]
+   LVS REDUCTION PRIORITY                 PARALLEL
+   
+   LVS SHORT EQUIVALENT NODES             NO
+
+   // Filter
+
+   LVS FILTER  D(dwn2psub)  OPEN
+
+   // Trace Property
+
+   TRACE PROPERTY  mp  w w 0.5
+   TRACE PROPERTY  mp  l l 0.5
+   TRACE PROPERTY  mn  w w 0.5
+   TRACE PROPERTY  mn  l l 0.5
+   TRACE PROPERTY  c(cl)  w w 0.5
+   TRACE PROPERTY  c(cl)  l l 0.5
+   TRACE PROPERTY  c(cl3)  w w 0.5
+   TRACE PROPERTY  c(cl3)  l l 0.5
+   TRACE PROPERTY  c(ch)  w w 0.5
+   TRACE PROPERTY  c(ch)  l l 0.5
+   TRACE PROPERTY  c(ch3)  w w 0.5
+   TRACE PROPERTY  c(ch3)  l l 0.5
+   TRACE PROPERTY  c(ch53t)  w w 0.5
+   TRACE PROPERTY  c(ch53t)  l l 0.5
+   TRACE PROPERTY  r(rl)  r r 0.5
+   TRACE PROPERTY  r(rt)  r r 0.5
+   TRACE PROPERTY  r(rt3)  r r 0.5
+   TRACE PROPERTY  r(ra)  r r 0.5
+   TRACE PROPERTY  r(rb)  r r 0.5
+   TRACE PROPERTY  r(rc)  r r 0.5
+   TRACE PROPERTY  r(rd)  r r 0.5
+   TRACE PROPERTY  r(re)  r r 0.5
+   TRACE PROPERTY  r(rg)  r r 0.5
+   TRACE PROPERTY  r(rh)  r r 0.5
+   TRACE PROPERTY  r(rw)  r r 0.5
+   TRACE PROPERTY  r(rf)  r r 0.5
+   TRACE PROPERTY  r(rk)  r r 0.5
+   TRACE PROPERTY  r(rm)  r r 0.5
+   TRACE PROPERTY  r(r1)  r r 0.5
+   TRACE PROPERTY  r(r2)  r r 0.5
+   TRACE PROPERTY  r(rb3)  r r 0.5
+   TRACE PROPERTY  r(ra3)  r r 0.5
+   TRACE PROPERTY  r(rc3)  r r 0.5
+   TRACE PROPERTY  r(mr2)  r r 0.5
+   TRACE PROPERTY  r(mr22t)  r r 0.5
+   TRACE PROPERTY  r(mr33t)  r r 0.5
+   TRACE PROPERTY  r(rd3)  r r 0.5
+   TRACE PROPERTY  r(r2d3)  r r 0.5
+   TRACE PROPERTY  r(re3)  r r 0.5
+   TRACE PROPERTY  r(rg3)  r r 0.5
+   TRACE PROPERTY  r(rh3)  r r 0.5
+   TRACE PROPERTY  r(rw3)  r r 0.5
+   TRACE PROPERTY  r(rf3)  r r 0.5
+   TRACE PROPERTY  r(rk3)  r r 0.5
+   TRACE PROPERTY  r(rm3)  r r 0.5
+   TRACE PROPERTY  r(r3)  r r 0.5
+   TRACE PROPERTY  r(r4)  r r 0.5
+   TRACE PROPERTY  r(r5)  r r 0.5
+   TRACE PROPERTY  r(rl)  l l 0.5
+   TRACE PROPERTY  r(rt)  l l 0.5
+   TRACE PROPERTY  r(rt3)  l l 0.5
+   TRACE PROPERTY  r(ra)  l l 0.5
+   TRACE PROPERTY  r(rb)  l l 0.5
+   TRACE PROPERTY  r(rc)  l l 0.5
+   TRACE PROPERTY  r(rd)  l l 0.5
+   TRACE PROPERTY  r(re)  l l 0.5
+   TRACE PROPERTY  r(rg)  l l 0.5
+   TRACE PROPERTY  r(rh)  l l 0.5
+   TRACE PROPERTY  r(rw)  l l 0.5
+   TRACE PROPERTY  r(rf)  l l 0.5
+   TRACE PROPERTY  r(rk)  l l 0.5
+   TRACE PROPERTY  r(rm)  l l 0.5
+   TRACE PROPERTY  r(r1)  l l 0.5
+   TRACE PROPERTY  r(r2)  l l 0.5
+   TRACE PROPERTY  r(rb3)  l l 0.5
+   TRACE PROPERTY  r(ra3)  l l 0.5
+   TRACE PROPERTY  r(rc3)  l l 0.5
+   TRACE PROPERTY  r(mr2)  l l 0.5
+   TRACE PROPERTY  r(mr22t)  l l 0.5
+   TRACE PROPERTY  r(mr33t)  l l 0.5
+   TRACE PROPERTY  r(rd3)  l l 0.5
+   TRACE PROPERTY  r(r2d3)  l l 0.5
+   TRACE PROPERTY  r(re3)  l l 0.5
+   TRACE PROPERTY  r(rg3)  l l 0.5
+   TRACE PROPERTY  r(rh3)  l l 0.5
+   TRACE PROPERTY  r(rw3)  l l 0.5
+   TRACE PROPERTY  r(rf3)  l l 0.5
+   TRACE PROPERTY  r(rk3)  l l 0.5
+   TRACE PROPERTY  r(rm3)  l l 0.5
+   TRACE PROPERTY  r(r3)  l l 0.5
+   TRACE PROPERTY  r(r4)  l l 0.5
+   TRACE PROPERTY  r(r5)  l l 0.5
+   TRACE PROPERTY  r(rt)  w w 0.5
+   TRACE PROPERTY  r(rt3)  w w 0.5
+   TRACE PROPERTY  r(ra)  w w 0.5
+   TRACE PROPERTY  r(rb)  w w 0.5
+   TRACE PROPERTY  r(rc)  w w 0.5
+   TRACE PROPERTY  r(rd)  w w 0.5
+   TRACE PROPERTY  r(re)  w w 0.5
+   TRACE PROPERTY  r(rg)  w w 0.5
+   TRACE PROPERTY  r(rh)  w w 0.5
+   TRACE PROPERTY  r(rw)  w w 0.5
+   TRACE PROPERTY  r(rf)  w w 0.5
+   TRACE PROPERTY  r(rk)  w w 0.5
+   TRACE PROPERTY  r(rm)  w w 0.5
+   TRACE PROPERTY  r(r1)  w w 0.5
+   TRACE PROPERTY  r(r2)  w w 0.5
+   TRACE PROPERTY  r(rb3)  w w 0.5
+   TRACE PROPERTY  r(ra3)  w w 0.5
+   TRACE PROPERTY  r(rc3)  w w 0.5
+   TRACE PROPERTY  r(mr2)  w w 0.5
+   TRACE PROPERTY  r(mr22t)  w w 0.5
+   TRACE PROPERTY  r(mr33t)  w w 0.5
+   TRACE PROPERTY  r(rd3)  w w 0.5
+   TRACE PROPERTY  r(r2d3)  w w 0.5
+   TRACE PROPERTY  r(re3)  w w 0.5
+   TRACE PROPERTY  r(rg3)  w w 0.5
+   TRACE PROPERTY  r(rh3)  w w 0.5
+   TRACE PROPERTY  r(rw3)  w w 0.5
+   TRACE PROPERTY  r(rf3)  w w 0.5
+   TRACE PROPERTY  r(rk3)  w w 0.5
+   TRACE PROPERTY  r(rm3)  w w 0.5
+   TRACE PROPERTY  r(r3)  w w 0.5
+   TRACE PROPERTY  r(r4)  w w 0.5
+   TRACE PROPERTY  r(r5)  w w 0.5
+   TRACE PROPERTY  c(cb)  l l 0.5
+   TRACE PROPERTY  c(cb)  w w 0.5
+   TRACE PROPERTY  c(cmim_hc)  l l 0.5
+   TRACE PROPERTY  c(cmim_hc)  w w 0.5
+   TRACE PROPERTY  c(cmim_uhd)  l l 0.5
+   TRACE PROPERTY  c(cmim_uhd)  w w 0.5
+   TRACE PROPERTY  c(cmim_stk)  l l 0.5
+   TRACE PROPERTY  c(cmim_stk)  w w 0.5
+   TRACE PROPERTY  c(cmim_uhdstk)  l l 0.5
+   TRACE PROPERTY  c(cmim_uhdstk)  w w 0.5
+   TRACE PROPERTY  c(cb)  c c 0.5
+   TRACE PROPERTY  c(cmim_hc)  c c 0.5
+   TRACE PROPERTY  c(cmim_uhd)  c c 0.5
+   TRACE PROPERTY  c(cmim_stk)  c c 0.5
+   TRACE PROPERTY  c(cmim_uhdstk)  c c 0.5
+   TRACE PROPERTY  c(cm32t)  l l 0.5
+   TRACE PROPERTY  c(cm32t)  nf nf 0
+   TRACE PROPERTY  c(cm33t)  l l 0.5
+   TRACE PROPERTY  c(cm33t)  nf nf 0
+   TRACE PROPERTY  c(usgcm32t)  l l 0.5
+   TRACE PROPERTY  c(usgcm32t)  nf nf 0
+   TRACE PROPERTY  c(usgcm33t)  l l 0.5
+   TRACE PROPERTY  c(usgcm33t)  nf nf 0
+   TRACE PROPERTY  c(cm42t)  l l 0.5
+   TRACE PROPERTY  c(cm42t)  nf nf 0
+   TRACE PROPERTY  c(cm43t)  l l 0.5
+   TRACE PROPERTY  c(cm43t)  nf nf 0
+   TRACE PROPERTY  c(usgcm42t)  l l 0.5
+   TRACE PROPERTY  c(usgcm42t)  nf nf 0
+   TRACE PROPERTY  c(usgcm43t)  l l 0.5
+   TRACE PROPERTY  c(usgcm43t)  nf nf 0
+   TRACE PROPERTY  c(cm5)  l l 0.5
+   TRACE PROPERTY  c(cm5)  nf nf 0
+   TRACE PROPERTY  c(cm53)  l l 0.5
+   TRACE PROPERTY  c(cm53)  nf nf 0
+   TRACE PROPERTY  c(usgcm52t)  l l 0.5
+   TRACE PROPERTY  c(usgcm52t)  nf nf 0
+   TRACE PROPERTY  c(usgcm53t)  l l 0.5
+   TRACE PROPERTY  c(usgcm53t)  nf nf 0
+   TRACE PROPERTY  d(ns)  a a 0.5
+   TRACE PROPERTY  d(dn)  a a 0.5
+   TRACE PROPERTY  d(n3)  a a 0.5
+   TRACE PROPERTY  d(dn50)  a a 0.5
+   TRACE PROPERTY  d(ps)  a a 0.5
+   TRACE PROPERTY  d(dp)  a a 0.5
+   TRACE PROPERTY  d(p3)  a a 0.5
+   TRACE PROPERTY  d(dp50)  a a 0.5
+   TRACE PROPERTY  d(nwldio_nc)  a a 0.5
+   TRACE PROPERTY  d(ns)  p p 0.5
+   TRACE PROPERTY  d(dn)  p p 0.5
+   TRACE PROPERTY  d(n3)  p p 0.5
+   TRACE PROPERTY  d(dn50)  p p 0.5
+   TRACE PROPERTY  d(ps)  p p 0.5
+   TRACE PROPERTY  d(dp)  p p 0.5
+   TRACE PROPERTY  d(p3)  p p 0.5
+   TRACE PROPERTY  d(dp50)  p p 0.5
+   TRACE PROPERTY  d(nwldio_nc)  p p 0.5
+   TRACE PROPERTY  q(vd)  m m 0
+   TRACE PROPERTY  q(vd5)  m m 0
+   TRACE PROPERTY  q(vd10)  m m 0
+   TRACE PROPERTY  q(vh)  m m 0
+   TRACE PROPERTY  q(vh5)  m m 0
+   TRACE PROPERTY  q(vh10)  m m 0
+   TRACE PROPERTY  q(vdn5)  m m 0
+   TRACE PROPERTY  q(vpnp18_s)  a a 0.5
+   TRACE PROPERTY  q(vpnp33_s)  a a 0.5
+   TRACE PROPERTY  q(vnpn18_s)  a a 0.5
+   TRACE PROPERTY  q(vpnp18_s)  p p 0.5
+   TRACE PROPERTY  q(vpnp33_s)  p p 0.5
+   TRACE PROPERTY  q(vnpn18_s)  p p 0.5
+   TRACE PROPERTY  mn(nh)  w w 0.5
+   TRACE PROPERTY  mn(nh)  l l 0.5
+   TRACE PROPERTY  mn(n5)  w w 0.5
+   TRACE PROPERTY  mn(n5)  l l 0.5
+   TRACE PROPERTY  mn(n)  w w 0.5
+   TRACE PROPERTY  mn(n)  l l 0.5
+   TRACE PROPERTY  mn(n18hvt)  w w 0.5
+   TRACE PROPERTY  mn(n18hvt)  l l 0.5
+   TRACE PROPERTY  mn(n18lvt)  w w 0.5
+   TRACE PROPERTY  mn(n18lvt)  l l 0.5
+   TRACE PROPERTY  mp(p)  w w 0.5
+   TRACE PROPERTY  mp(p)  l l 0.5
+   TRACE PROPERTY  mp(p18hvt)  w w 0.5
+   TRACE PROPERTY  mp(p18hvt)  l l 0.5
+   TRACE PROPERTY  mp(p18lvt)  w w 0.5
+   TRACE PROPERTY  mp(p18lvt)  l l 0.5
+   TRACE PROPERTY  mp(ph)  w w 0.5
+   TRACE PROPERTY  mp(ph)  l l 0.5
+   TRACE PROPERTY  mp(p5)  w w 0.5
+   TRACE PROPERTY  mp(p5)  l l 0.5
+   TRACE PROPERTY  d(dnpwcpl18)  a a 0.5
+   TRACE PROPERTY  d(dnpwcpl18)  p p 0.5
+   TRACE PROPERTY  d(dnpwcpl5)  a a 0.5
+   TRACE PROPERTY  d(dnpwcpl5)  p p 0.5
+   TRACE PROPERTY  d(dpnwcpl18)  a a 0.5
+   TRACE PROPERTY  d(dpnwcpl18)  p p 0.5
+   TRACE PROPERTY  d(dpnwcpl5)  a a 0.5
+   TRACE PROPERTY  d(dpnwcpl5)  p p 0.5
+
+
+
+                   CELL COMPARISON RESULTS ( TOP LEVEL )
+
+
+
+                  #   #         #####################  
+                   # #          #                   #  
+                    #           #     INCORRECT     #  
+                   # #          #                   #  
+                  #   #         #####################  
+
+
+  Error:    Connectivity errors.
+  Error:    Property errors.
+  Warning:  Unbalanced smashed mosfets were matched.
+  Warning:  Ambiguity points were found and resolved arbitrarily.
+
+LAYOUT CELL NAME:         core_with_IO
+SOURCE CELL NAME:         core_with_IO
+
+--------------------------------------------------------------------------------------------------------------
+
+INITIAL NUMBERS OF OBJECTS
+--------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:             10        10
+
+ Nets:              64        49    *
+
+ Instances:        108       108         MN (4 pins)
+                   132       132         MP (4 pins)
+                     6         6         C (2 pins)
+                    43        32    *    R (2 pins)
+                   114        14    *    D (2 pins)
+                ------    ------
+ Total Inst:       403       292
+
+
+NUMBERS OF OBJECTS AFTER TRANSFORMATION
+---------------------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:             10        10
+
+ Nets:              34        34
+
+ Instances:         17        17         MN (4 pins)
+                     9         9         MP (4 pins)
+                     6         6         C (2 pins)
+                    21        21         R (2 pins)
+                     2         2         D (2 pins)
+                     2         2         SMP2 (4 pins)
+                     2         2         _sup2v (4 pins)
+                ------    ------
+ Total Inst:        59        59
+
+
+       * = Number of objects in layout different from number in source.
+
+
+
+**************************************************************************************************************
+                                 INCORRECT OBJECTS
+**************************************************************************************************************
+
+
+LEGEND:
+-------
+
+  ne  = Naming Error (same layout name found in source
+        circuit, but object was matched otherwise).
+
+
+**************************************************************************************************************
+                                   INCORRECT NETS
+
+DISC#  LAYOUT NAME                                               SOURCE NAME
+**************************************************************************************************************
+
+  1    Net VSS                                                   VSS
+       --- 31 Connections On This Net ---                        --- 31 Connections On This Net ---
+       --------------------------                                --------------------------
+
+       --- Incorrect Devices On This Net ---
+
+       X17/X28/M0(795.665,420.910)  MN(NH)                       XI3/XI10/M19  MN(NH)
+         g: X17/8                                                  g: XI3/XI10/U18_U74$11_gate
+         s: Vout                                                   d: Vout
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+       X17/R14(836.010,384.640)  R(RW)                           XI3/XI10/R16  R(RW)
+         neg: X17/8                                                pos: XI3/XI10/U18_U74$11_gate
+         pos: VSS                                                  ** VSS **
+         ** VSS0 **                                                neg: VSS0
+
+       X16/X28/M0(188.345,453.910)  MN(NH)                       XI3/XI9/M19  MN(NH)
+         g: X16/8                                                  g: XI3/XI9/U18_U74$11_gate
+         s: Vin2                                                   d: Vin2
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+       X16/R14(148.000,417.640)  R(RW)                           XI3/XI9/R16  R(RW)
+         neg: X16/8                                                pos: XI3/XI9/U18_U74$11_gate
+         pos: VSS                                                  ** VSS **
+         ** VSS0 **                                                neg: VSS0
+
+       X15/X28/M0(188.345,358.910)  MN(NH)                       XI3/XI8/M19  MN(NH)
+         g: X15/8                                                  g: XI3/XI8/U18_U74$11_gate
+         s: Vin1                                                   d: Vin1
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+       X15/R14(148.000,322.640)  R(RW)                           XI3/XI8/R16  R(RW)
+         neg: X15/8                                                pos: XI3/XI8/U18_U74$11_gate
+         pos: VSS                                                  ** VSS **
+         ** VSS0 **                                                neg: VSS0
+
+       X17/X15/R0(836.305,378.775)  R(RW)                        XI3/XI10/R15  R(RW)
+         pos: X17/10                                               pos: XI3/XI10/U18_U82_gate
+         neg: VSS0                                                 ** VSS0 **
+         ** VSS **                                                 neg: VSS
+
+       X17/X19/X0/X0/M0(852.335,415.520)  MN(NH)                 XI3/XI10/M18  MN(NH)
+         g: X17/10                                                 g: XI3/XI10/U18_U82_gate
+         s: Ext_V_out                                              d: Ext_V_out
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+       X15/X15/R0(147.705,316.775)  R(RW)                        XI3/XI8/R15  R(RW)
+         pos: X15/10                                               pos: XI3/XI8/U18_U82_gate
+         neg: VSS0                                                 ** VSS0 **
+         ** VSS **                                                 neg: VSS
+
+       X15/X19/X0/X0/M0(131.675,353.520)  MN(NH)                 XI3/XI8/M18  MN(NH)
+         g: X15/10                                                 g: XI3/XI8/U18_U82_gate
+         s: Ext_V_Inp                                              d: Ext_V_Inp
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+       X16/X15/R0(147.705,411.775)  R(RW)                        XI3/XI9/R15  R(RW)
+         pos: X16/10                                               pos: XI3/XI9/U18_U82_gate
+         neg: VSS0                                                 ** VSS0 **
+         ** VSS **                                                 neg: VSS
+
+       X16/X19/X0/X0/M0(131.675,448.520)  MN(NH)                 XI3/XI9/M18  MN(NH)
+         g: X16/10                                                 g: XI3/XI9/U18_U82_gate
+         s: Ext_V_Inn                                              d: Ext_V_Inn
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+
+       --- Correct Devices On This Net ---
+
+       (cell ports)                                              (cell ports)
+         VDD: VDD                                                  VDD: VDD
+         VSS: VSS                                                  VSS: VSS
+         VSS0: VSS0                                                VSS0: VSS0
+         VDD0: VDD0                                                VDD0: VDD0
+         Vin2: Vin2                                                Vin2: Vin2
+         Vin1: Vin1                                                Vin1: Vin1
+         Vout: Vout                                                Vout: Vout
+         Ext_V_Inp: Ext_V_Inp                                      Ext_V_Inp: Ext_V_Inp
+         Ext_V_Inn: Ext_V_Inn                                      Ext_V_Inn: Ext_V_Inn
+         Ext_V_out: Ext_V_out                                      Ext_V_out: Ext_V_out
+
+       X79/X62/M0(384.425,373.875)  MN(N)                        XI0/MM26  MN(N)
+         g: X79/18                                                 g: XI0/net44
+         s: X79/17                                                 s: XI0/net12
+         d: X79/20                                                 d: XI0/net1
+         b: VSS                                                    b: VSS
+
+       X79/X61/M0(379.930,375.820)  MN(N)                        XI0/MM22  MN(N)
+         g: X79/17                                                 g: XI0/net12
+         s: VSS                                                    s: VSS
+         d: X79/18                                                 d: XI0/net44
+         b: VSS                                                    b: VSS
+
+       X79/X60/M0(385.740,389.885)  MN(N)                        XI0/MM5  MN(N)
+         g: X79/15                                                 g: XI0/net42
+         s: VSS                                                    s: VSS
+         d: X79/13                                                 d: XI0/net2
+         b: VSS                                                    b: VSS
+
+       X79/X59/M0(382.055,389.885)  MN(N)                        XI0/MM6  MN(N)
+         g: X79/15                                                 g: XI0/net42
+         s: VSS                                                    s: VSS
+         d: X79/15                                                 d: XI0/net42
+         b: VSS                                                    b: VSS
+
+       X79/R21(375.450,362.110)  R(RC)                           XI0/RR0  R(RC)
+         pos: X79/22                                               pos: XI0/net41
+         neg: VSS                                                  neg: VSS
+
+       X79/M9(419.275,376.910)  MN(N)                            XI0/MM1  MN(N)
+         g: X79/13                                                 g: XI0/net2
+         s: VSS                                                    s: VSS
+         d: Vout                                                   d: Vout
+         b: VSS                                                    b: VSS
+
+       X79/M1(411.835,372.615)  MN(N)                            XI0/MM25  MN(N)
+         g: X79/17                                                 g: XI0/net12
+         s: X79/22                                                 s: XI0/net41
+         d: X79/20                                                 d: XI0/net1
+         b: VSS                                                    b: VSS
+
+       X79/M0(408.805,373.000)  MN(N)                            XI0/MM23  MN(N)
+         g: X79/17                                                 g: XI0/net12
+         s: VSS                                                    s: VSS
+         d: X79/17                                                 d: XI0/net12
+         b: VSS                                                    b: VSS
+
+       X73/X2/R0(387.365,573.400)  R(RW)                         XI3/XI0/R15  R(RW)
+         pos: 16                                                   pos: XI3/XI0/U31_U18_r1
+         neg: VSS                                                  neg: VSS
+
+       X62/X6/D17(594.875,140.860)  D(P3)                        XI3/XI3/D31  D(P3)
+         pos: VSS                                                  pos: VSS
+         neg: VSS0                                                 neg: VSS0
+
+       X62/X6/D8(565.535,140.860)  D(P3)                         XI3/XI3/D30  D(P3)
+         pos: VSS0                                                 pos: VSS0
+         neg: VSS                                                  neg: VSS
+
+       X43/X0/M0(549.525,654.620)  MN(N)                         XI3/XI3/M18  MN(N)
+         g: 9                                                      g: XI3/XI3/U31_U18_r1
+         s: VDD                                                    d: VDD
+         d: VSS                                                    s: VSS
+         b: VSS                                                    b: VSS
+
+       X39/R0(597.135,553.460)  R(RW)                            XI3/XI3/R15  R(RW)
+         pos: 9                                                    pos: XI3/XI3/U31_U18_r1
+         neg: VSS                                                  neg: VSS
+
+       X55/X0/X0/M0(549.515,576.750)  MP(P)                      XI3/XI3/M3  MP(P)
+         g: 10                                                     g: XI3/XI3/U33_U31_r2
+         s: VSS                                                    d: VSS
+         d: VDD                                                    s: VDD
+         b: VDD                                                    b: VDD
+
+       X54/X0/X0/M0(434.495,576.750)  MP(P)                      XI3/XI0/M3  MP(P)
+         g: 14                                                     g: XI3/XI0/U32_U31_r2
+         s: VSS                                                    d: VSS
+         d: VDD                                                    s: VDD
+         b: VDD                                                    b: VDD
+
+
+--------------------------------------------------------------------------------------------------------------
+
+  2    Net VSS0                                                  VSS0
+       --- 22 Connections On This Net ---                        --- 22 Connections On This Net ---
+       --------------------------                                --------------------------
+
+       --- Incorrect Devices On This Net ---
+
+       X17/X19/X0/X0/M0(852.335,415.520)  MN(NH)                 XI3/XI10/M18  MN(NH)
+         g: X17/10                                                 g: XI3/XI10/U18_U82_gate
+         s: Ext_V_out                                              d: Ext_V_out
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+       X17/X15/R0(836.305,378.775)  R(RW)                        XI3/XI10/R15  R(RW)
+         pos: X17/10                                               pos: XI3/XI10/U18_U82_gate
+         neg: VSS0                                                 ** VSS0 **
+         ** VSS **                                                 neg: VSS
+
+       X16/X19/X0/X0/M0(131.675,448.520)  MN(NH)                 XI3/XI9/M18  MN(NH)
+         g: X16/10                                                 g: XI3/XI9/U18_U82_gate
+         s: Ext_V_Inn                                              d: Ext_V_Inn
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+       X16/X15/R0(147.705,411.775)  R(RW)                        XI3/XI9/R15  R(RW)
+         pos: X16/10                                               pos: XI3/XI9/U18_U82_gate
+         neg: VSS0                                                 ** VSS0 **
+         ** VSS **                                                 neg: VSS
+
+       X15/X19/X0/X0/M0(131.675,353.520)  MN(NH)                 XI3/XI8/M18  MN(NH)
+         g: X15/10                                                 g: XI3/XI8/U18_U82_gate
+         s: Ext_V_Inp                                              d: Ext_V_Inp
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+       X15/X15/R0(147.705,316.775)  R(RW)                        XI3/XI8/R15  R(RW)
+         pos: X15/10                                               pos: XI3/XI8/U18_U82_gate
+         neg: VSS0                                                 ** VSS0 **
+         ** VSS **                                                 neg: VSS
+
+       X17/R14(836.010,384.640)  R(RW)                           XI3/XI10/R16  R(RW)
+         neg: X17/8                                                pos: XI3/XI10/U18_U74$11_gate
+         pos: VSS                                                  ** VSS **
+         ** VSS0 **                                                neg: VSS0
+
+       X17/X28/M0(795.665,420.910)  MN(NH)                       XI3/XI10/M19  MN(NH)
+         g: X17/8                                                  g: XI3/XI10/U18_U74$11_gate
+         s: Vout                                                   d: Vout
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+       X15/R14(148.000,322.640)  R(RW)                           XI3/XI8/R16  R(RW)
+         neg: X15/8                                                pos: XI3/XI8/U18_U74$11_gate
+         pos: VSS                                                  ** VSS **
+         ** VSS0 **                                                neg: VSS0
+
+       X15/X28/M0(188.345,358.910)  MN(NH)                       XI3/XI8/M19  MN(NH)
+         g: X15/8                                                  g: XI3/XI8/U18_U74$11_gate
+         s: Vin1                                                   d: Vin1
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+       X16/R14(148.000,417.640)  R(RW)                           XI3/XI9/R16  R(RW)
+         neg: X16/8                                                pos: XI3/XI9/U18_U74$11_gate
+         pos: VSS                                                  ** VSS **
+         ** VSS0 **                                                neg: VSS0
+
+       X16/X28/M0(188.345,453.910)  MN(NH)                       XI3/XI9/M19  MN(NH)
+         g: X16/8                                                  g: XI3/XI9/U18_U74$11_gate
+         s: Vin2                                                   d: Vin2
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+
+       --- Correct Devices On This Net ---
+
+       (cell ports)                                              (cell ports)
+         VDD: VDD                                                  VDD: VDD
+         VSS: VSS                                                  VSS: VSS
+         VSS0: VSS0                                                VSS0: VSS0
+         VDD0: VDD0                                                VDD0: VDD0
+         Vin2: Vin2                                                Vin2: Vin2
+         Vin1: Vin1                                                Vin1: Vin1
+         Vout: Vout                                                Vout: Vout
+         Ext_V_Inp: Ext_V_Inp                                      Ext_V_Inp: Ext_V_Inp
+         Ext_V_Inn: Ext_V_Inn                                      Ext_V_Inn: Ext_V_Inn
+         Ext_V_out: Ext_V_out                                      Ext_V_out: Ext_V_out
+
+       X74/X2/R0(441.645,207.180)  R(RW)                         XI3/XI5/R2  R(RW)
+         pos: 15                                                   pos: XI3/XI5/U31_U29_c2
+         neg: VSS0                                                 neg: VSS0
+
+       X67/X0/M0(387.285,654.620)  MN(N)                         XI3/XI0/M18  MN(N)
+         g: 16                                                     g: XI3/XI0/U31_U18_r1
+         s: VDD                                                    d: VDD
+         d: VSS0                                                   s: VSS0
+         b: VSS0                                                   b: VSS0
+
+       X62/X6/D17(594.875,140.860)  D(P3)                        XI3/XI3/D31  D(P3)
+         pos: VSS                                                  pos: VSS
+         neg: VSS0                                                 neg: VSS0
+
+       X62/X6/D8(565.535,140.860)  D(P3)                         XI3/XI3/D30  D(P3)
+         pos: VSS0                                                 pos: VSS0
+         neg: VSS                                                  neg: VSS
+
+       X62/X3/R0(597.135,207.060)  R(RW)                         XI3/XI4/R2  R(RW)
+         pos: X62/6                                                pos: XI3/XI4/U30_U29_c2
+         neg: VSS0                                                 neg: VSS0
+
+       X62/X15/X0/X0/M0(549.515,204.030)  MP(PH)                 XI3/XI5/M16  MP(PH)
+         g: X62/7                                                  g: XI3/XI5/U19_U22$11_gate
+         s: VSS0                                                   d: VSS0
+         d: VDD0                                                   s: VDD0
+         b: VDD0                                                   b: VDD0
+
+       X61/X0/X0/M0(394.515,204.030)  MP(PH)                     XI3/XI4/M16  MP(PH)
+         g: 17                                                     g: XI3/XI4/U19_U22$11_gate
+         s: VSS0                                                   d: VSS0
+         d: VDD0                                                   s: VDD0
+         b: VDD0                                                   b: VDD0
+
+       X65/X0/M0(394.375,125.960)  MN(NH)                        XI3/XI5/M4  MN(NH)
+         g: 15                                                     g: XI3/XI5/U31_U29_c2
+         s: VDD0                                                   d: VDD0
+         d: VSS0                                                   s: VSS0
+         b: VSS0                                                   b: VSS0
+
+       X62/X9/X0/M0(549.375,125.960)  MN(NH)                     XI3/XI4/M4  MN(NH)
+         g: X62/6                                                  g: XI3/XI4/U30_U29_c2
+         s: VDD0                                                   d: VDD0
+         d: VSS0                                                   s: VSS0
+         b: VSS0                                                   b: VSS0
+
+
+--------------------------------------------------------------------------------------------------------------
+
+  3    Net Vin2                                                  Vin2
+       --- 5 Connections On This Net ---                         --- 6 Connections On This Net ---
+       --------------------------                                --------------------------
+
+       --- Incorrect Devices On This Net ---
+
+       X16/X28/M0(188.345,453.910)  MN(NH)                       XI3/XI9/M19  MN(NH)
+         g: X16/8                                                  g: XI3/XI9/U18_U74$11_gate
+         s: Vin2                                                   d: Vin2
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+       X17/X27/M0(774.665,430.790)  MP(PH)                       XI3/XI9/M1  MP(PH)
+         g: X17/7                                                  g: XI3/XI9/U18_U79$3_gate
+         s: VDD0                                                   d: VDD0
+         b: VDD0                                                   b: VDD0
+         d: Ext_V_out                                              ** Ext_V_out **
+         ** Vin2 **                                                s: Vin2
+
+
+       --- Correct Devices On This Net ---
+
+       (cell ports)                                              (cell ports)
+         VDD: VDD                                                  VDD: VDD
+         VSS: VSS                                                  VSS: VSS
+         VSS0: VSS0                                                VSS0: VSS0
+         VDD0: VDD0                                                VDD0: VDD0
+         Vin2: Vin2                                                Vin2: Vin2
+         Vin1: Vin1                                                Vin1: Vin1
+         Vout: Vout                                                Vout: Vout
+         Ext_V_Inp: Ext_V_Inp                                      Ext_V_Inp: Ext_V_Inp
+         Ext_V_Inn: Ext_V_Inn                                      Ext_V_Inn: Ext_V_Inn
+         Ext_V_out: Ext_V_out                                      Ext_V_out: Ext_V_out
+
+       (SMP2)                                                    (SMP2)
+         output: X79/12                                            output: XI0/net45
+         output: X79/15                                            output: XI0/net42
+         input: Vin2                                               input: Vin2
+         input: Vin2                                               input: Vin2
+
+       Transistors:
+         X79/X69/M0(378.285,387.860)  MP(P)                        XI0/MM8  MP(P)
+         X79/X71/M0(378.105,383.785)  MP(P)                        XI0/MM2  MP(P)
+
+
+       X16/X22/R0(141.525,447.155)  R(RE)                        XI3/XI9/R13  R(RE)
+         pos: Vin2                                                 pos: Vin2
+         neg: Ext_V_Inn                                            neg: Ext_V_Inn
+
+
+--------------------------------------------------------------------------------------------------------------
+
+  4    Net Vin1                                                  Vin1
+       --- 5 Connections On This Net ---                         --- 6 Connections On This Net ---
+       --------------------------                                --------------------------
+
+       --- Incorrect Devices On This Net ---
+
+       X15/X28/M0(188.345,358.910)  MN(NH)                       XI3/XI8/M19  MN(NH)
+         g: X15/8                                                  g: XI3/XI8/U18_U74$11_gate
+         s: Vin1                                                   d: Vin1
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+       X15/X27/M0(209.345,368.790)  MP(PH)                       XI3/XI8/M1  MP(PH)
+         g: X15/7                                                  g: XI3/XI8/U18_U79$3_gate
+         s: VDD0                                                   d: VDD0
+         b: VDD0                                                   b: VDD0
+         d: Ext_V_Inp                                              ** Ext_V_Inp **
+         ** Vin1 **                                                s: Vin1
+
+
+       --- Correct Devices On This Net ---
+
+       (cell ports)                                              (cell ports)
+         VDD: VDD                                                  VDD: VDD
+         VSS: VSS                                                  VSS: VSS
+         VSS0: VSS0                                                VSS0: VSS0
+         VDD0: VDD0                                                VDD0: VDD0
+         Vin2: Vin2                                                Vin2: Vin2
+         Vin1: Vin1                                                Vin1: Vin1
+         Vout: Vout                                                Vout: Vout
+         Ext_V_Inp: Ext_V_Inp                                      Ext_V_Inp: Ext_V_Inp
+         Ext_V_Inn: Ext_V_Inn                                      Ext_V_Inn: Ext_V_Inn
+         Ext_V_out: Ext_V_out                                      Ext_V_out: Ext_V_out
+
+       (SMP2)                                                    (SMP2)
+         output: X79/12                                            output: XI0/net45
+         output: X79/13                                            output: XI0/net2
+         input: Vin1                                               input: Vin1
+         input: Vin1                                               input: Vin1
+
+       Transistors:
+         X79/X68/M0(376.490,394.440)  MP(P)                        XI0/MM9  MP(P)
+         X79/X70/M0(376.305,391.605)  MP(P)                        XI0/MM3  MP(P)
+
+
+       X15/X22/R0(141.525,352.155)  R(RE)                        XI3/XI8/R13  R(RE)
+         pos: Vin1                                                 pos: Vin1
+         neg: Ext_V_Inp                                            neg: Ext_V_Inp
+
+
+--------------------------------------------------------------------------------------------------------------
+
+  5    Net Vout                                                  Vout
+       --- 6 Connections On This Net ---                         --- 7 Connections On This Net ---
+       --------------------------                                --------------------------
+
+       --- Incorrect Devices On This Net ---
+
+       X17/X28/M0(795.665,420.910)  MN(NH)                       XI3/XI10/M19  MN(NH)
+         g: X17/8                                                  g: XI3/XI10/U18_U74$11_gate
+         s: Vout                                                   d: Vout
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+       X16/X27/M0(209.345,463.790)  MP(PH)                       XI3/XI10/M1  MP(PH)
+         g: X16/7                                                  g: XI3/XI10/U18_U79$3_gate
+         s: VDD0                                                   d: VDD0
+         b: VDD0                                                   b: VDD0
+         d: Ext_V_Inn                                              ** Ext_V_Inn **
+         ** Vout **                                                s: Vout
+
+
+       --- Correct Devices On This Net ---
+
+       (cell ports)                                              (cell ports)
+         VDD: VDD                                                  VDD: VDD
+         VSS: VSS                                                  VSS: VSS
+         VSS0: VSS0                                                VSS0: VSS0
+         VDD0: VDD0                                                VDD0: VDD0
+         Vin2: Vin2                                                Vin2: Vin2
+         Vin1: Vin1                                                Vin1: Vin1
+         Vout: Vout                                                Vout: Vout
+         Ext_V_Inp: Ext_V_Inp                                      Ext_V_Inp: Ext_V_Inp
+         Ext_V_Inn: Ext_V_Inn                                      Ext_V_Inn: Ext_V_Inn
+         Ext_V_out: Ext_V_out                                      Ext_V_out: Ext_V_out
+
+       X79/C34(391.945,386.485)  C(CB)                           XI0/CC1  C(CB)
+         pos: Vout                                                 pos: Vout
+         neg: X79/13                                               neg: XI0/net2
+
+       X79/M20(414.745,375.175)  MP(P)                           XI0/MM17  MP(P)
+         g: X79/20                                                 g: XI0/net1
+         s: VDD                                                    s: VDD
+         d: Vout                                                   d: Vout
+         b: VDD                                                    b: VDD
+
+       X79/M9(419.275,376.910)  MN(N)                            XI0/MM1  MN(N)
+         g: X79/13                                                 g: XI0/net2
+         s: VSS                                                    s: VSS
+         d: Vout                                                   d: Vout
+         b: VSS                                                    b: VSS
+
+       X17/X22/R0(842.485,414.155)  R(RE)                        XI3/XI10/R13  R(RE)
+         pos: Vout                                                 pos: Vout
+         neg: Ext_V_out                                            neg: Ext_V_out
+
+
+--------------------------------------------------------------------------------------------------------------
+
+  6    Net Ext_V_Inp                                             Ext_V_Inp
+       --- 4 Connections On This Net ---                         --- 3 Connections On This Net ---
+       --------------------------                                --------------------------
+
+       --- Incorrect Devices On This Net ---
+
+       X15/X27/M0(209.345,368.790)  MP(PH)                       XI3/XI8/M1  MP(PH)
+         g: X15/7                                                  g: XI3/XI8/U18_U79$3_gate
+         s: VDD0                                                   d: VDD0
+         b: VDD0                                                   b: VDD0
+         d: Ext_V_Inp                                              ** Ext_V_Inp **
+         ** Vin1 **                                                s: Vin1
+
+       X15/X19/X0/X0/M0(131.675,353.520)  MN(NH)                 XI3/XI8/M18  MN(NH)
+         g: X15/10                                                 g: XI3/XI8/U18_U82_gate
+         s: Ext_V_Inp                                              d: Ext_V_Inp
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+
+       --- Correct Devices On This Net ---
+
+       (cell ports)                                              (cell ports)
+         VDD: VDD                                                  VDD: VDD
+         VSS: VSS                                                  VSS: VSS
+         VSS0: VSS0                                                VSS0: VSS0
+         VDD0: VDD0                                                VDD0: VDD0
+         Vin2: Vin2                                                Vin2: Vin2
+         Vin1: Vin1                                                Vin1: Vin1
+         Vout: Vout                                                Vout: Vout
+         Ext_V_Inp: Ext_V_Inp                                      Ext_V_Inp: Ext_V_Inp
+         Ext_V_Inn: Ext_V_Inn                                      Ext_V_Inn: Ext_V_Inn
+         Ext_V_out: Ext_V_out                                      Ext_V_out: Ext_V_out
+
+       X15/X22/R0(141.525,352.155)  R(RE)                        XI3/XI8/R13  R(RE)
+         pos: Vin1                                                 pos: Vin1
+         neg: Ext_V_Inp                                            neg: Ext_V_Inp
+
+
+--------------------------------------------------------------------------------------------------------------
+
+  7    Net Ext_V_Inn                                             Ext_V_Inn
+       --- 4 Connections On This Net ---                         --- 3 Connections On This Net ---
+       --------------------------                                --------------------------
+
+       --- Incorrect Devices On This Net ---
+
+       X16/X27/M0(209.345,463.790)  MP(PH)                       XI3/XI10/M1  MP(PH)
+         g: X16/7                                                  g: XI3/XI10/U18_U79$3_gate
+         s: VDD0                                                   d: VDD0
+         b: VDD0                                                   b: VDD0
+         d: Ext_V_Inn                                              ** Ext_V_Inn **
+         ** Vout **                                                s: Vout
+
+       X16/X19/X0/X0/M0(131.675,448.520)  MN(NH)                 XI3/XI9/M18  MN(NH)
+         g: X16/10                                                 g: XI3/XI9/U18_U82_gate
+         s: Ext_V_Inn                                              d: Ext_V_Inn
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+
+       --- Correct Devices On This Net ---
+
+       (cell ports)                                              (cell ports)
+         VDD: VDD                                                  VDD: VDD
+         VSS: VSS                                                  VSS: VSS
+         VSS0: VSS0                                                VSS0: VSS0
+         VDD0: VDD0                                                VDD0: VDD0
+         Vin2: Vin2                                                Vin2: Vin2
+         Vin1: Vin1                                                Vin1: Vin1
+         Vout: Vout                                                Vout: Vout
+         Ext_V_Inp: Ext_V_Inp                                      Ext_V_Inp: Ext_V_Inp
+         Ext_V_Inn: Ext_V_Inn                                      Ext_V_Inn: Ext_V_Inn
+         Ext_V_out: Ext_V_out                                      Ext_V_out: Ext_V_out
+
+       X16/X22/R0(141.525,447.155)  R(RE)                        XI3/XI9/R13  R(RE)
+         pos: Vin2                                                 pos: Vin2
+         neg: Ext_V_Inn                                            neg: Ext_V_Inn
+
+
+--------------------------------------------------------------------------------------------------------------
+
+  8    Net Ext_V_out                                             Ext_V_out
+       --- 4 Connections On This Net ---                         --- 3 Connections On This Net ---
+       --------------------------                                --------------------------
+
+       --- Incorrect Devices On This Net ---
+
+       X17/X27/M0(774.665,430.790)  MP(PH)                       XI3/XI9/M1  MP(PH)
+         g: X17/7                                                  g: XI3/XI9/U18_U79$3_gate
+         s: VDD0                                                   d: VDD0
+         b: VDD0                                                   b: VDD0
+         d: Ext_V_out                                              ** Ext_V_out **
+         ** Vin2 **                                                s: Vin2
+
+       X17/X19/X0/X0/M0(852.335,415.520)  MN(NH)                 XI3/XI10/M18  MN(NH)
+         g: X17/10                                                 g: XI3/XI10/U18_U82_gate
+         s: Ext_V_out                                              d: Ext_V_out
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+
+       --- Correct Devices On This Net ---
+
+       (cell ports)                                              (cell ports)
+         VDD: VDD                                                  VDD: VDD
+         VSS: VSS                                                  VSS: VSS
+         VSS0: VSS0                                                VSS0: VSS0
+         VDD0: VDD0                                                VDD0: VDD0
+         Vin2: Vin2                                                Vin2: Vin2
+         Vin1: Vin1                                                Vin1: Vin1
+         Vout: Vout                                                Vout: Vout
+         Ext_V_Inp: Ext_V_Inp                                      Ext_V_Inp: Ext_V_Inp
+         Ext_V_Inn: Ext_V_Inn                                      Ext_V_Inn: Ext_V_Inn
+         Ext_V_out: Ext_V_out                                      Ext_V_out: Ext_V_out
+
+       X17/X22/R0(842.485,414.155)  R(RE)                        XI3/XI10/R13  R(RE)
+         pos: Vout                                                 pos: Vout
+         neg: Ext_V_out                                            neg: Ext_V_out
+
+
+
+
+**************************************************************************************************************
+                                      PROPERTY ERRORS
+
+DISC#  LAYOUT                                                    SOURCE                      ERROR
+**************************************************************************************************************
+
+  9    X15/R14(148.000,322.640)  R(RW)                           XI3/XI8/R16  R(RW)
+       l: 2.1 u                                                  l: 8.65 u                   75.7%
+       r: 1190.92 ohm                                            r: 4891 ohm                 75.7%
+       Pins:
+         neg: X15/8                                                pos: XI3/XI8/U18_U74$11_gate
+         pos: VSS                                                  ** VSS **
+         ** VSS0 **                                                neg: VSS0
+
+ 10    X15/X15/R0(147.705,316.775)  R(RW)                        XI3/XI8/R15  R(RW)
+       l: 8.65 u                                                 l: 2.1 u                     312%
+       r: 4891.48 ohm                                            r: 1190 ohm                  311%
+       Pins:
+         pos: X15/10                                               pos: XI3/XI8/U18_U82_gate
+         neg: VSS0                                                 ** VSS0 **
+         ** VSS **                                                 neg: VSS
+
+ 11    X15/X19/X0/X0/M0(131.675,353.520)  MN(NH)                 XI3/XI8/M18  MN(NH)
+       l: 0.5 u                                                  l: 0.4 u                      25%
+       w: 360 u                                                  w: 30 u                  1.1e+03%
+       Pins:
+         g: X15/10                                                 g: XI3/XI8/U18_U82_gate
+         s: Ext_V_Inp                                              d: Ext_V_Inp
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+ 12    X15/X28/M0(188.345,358.910)  MN(NH)                       XI3/XI8/M19  MN(NH)
+       l: 0.4 u                                                  l: 0.5 u                      20%
+       w: 30 u                                                   w: 360 u                    91.7%
+       Pins:
+         g: X15/8                                                  g: XI3/XI8/U18_U74$11_gate
+         s: Vin1                                                   d: Vin1
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+ 13    X16/R14(148.000,417.640)  R(RW)                           XI3/XI9/R16  R(RW)
+       l: 2.1 u                                                  l: 8.65 u                   75.7%
+       r: 1190.92 ohm                                            r: 4891 ohm                 75.7%
+       Pins:
+         neg: X16/8                                                pos: XI3/XI9/U18_U74$11_gate
+         pos: VSS                                                  ** VSS **
+         ** VSS0 **                                                neg: VSS0
+
+ 14    X16/X15/R0(147.705,411.775)  R(RW)                        XI3/XI9/R15  R(RW)
+       l: 8.65 u                                                 l: 2.1 u                     312%
+       r: 4891.48 ohm                                            r: 1190 ohm                  311%
+       Pins:
+         pos: X16/10                                               pos: XI3/XI9/U18_U82_gate
+         neg: VSS0                                                 ** VSS0 **
+         ** VSS **                                                 neg: VSS
+
+ 15    X16/X19/X0/X0/M0(131.675,448.520)  MN(NH)                 XI3/XI9/M18  MN(NH)
+       l: 0.5 u                                                  l: 0.4 u                      25%
+       w: 360 u                                                  w: 30 u                  1.1e+03%
+       Pins:
+         g: X16/10                                                 g: XI3/XI9/U18_U82_gate
+         s: Ext_V_Inn                                              d: Ext_V_Inn
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+ 16    X16/X28/M0(188.345,453.910)  MN(NH)                       XI3/XI9/M19  MN(NH)
+       l: 0.4 u                                                  l: 0.5 u                      20%
+       w: 30 u                                                   w: 360 u                    91.7%
+       Pins:
+         g: X16/8                                                  g: XI3/XI9/U18_U74$11_gate
+         s: Vin2                                                   d: Vin2
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+ 17    X17/R14(836.010,384.640)  R(RW)                           XI3/XI10/R16  R(RW)
+       l: 2.1 u                                                  l: 8.65 u                   75.7%
+       r: 1190.92 ohm                                            r: 4891 ohm                 75.7%
+       Pins:
+         neg: X17/8                                                pos: XI3/XI10/U18_U74$11_gate
+         pos: VSS                                                  ** VSS **
+         ** VSS0 **                                                neg: VSS0
+
+ 18    X17/X15/R0(836.305,378.775)  R(RW)                        XI3/XI10/R15  R(RW)
+       l: 8.65 u                                                 l: 2.1 u                     312%
+       r: 4891.48 ohm                                            r: 1190 ohm                  311%
+       Pins:
+         pos: X17/10                                               pos: XI3/XI10/U18_U82_gate
+         neg: VSS0                                                 ** VSS0 **
+         ** VSS **                                                 neg: VSS
+
+ 19    X17/X19/X0/X0/M0(852.335,415.520)  MN(NH)                 XI3/XI10/M18  MN(NH)
+       l: 0.5 u                                                  l: 0.4 u                      25%
+       w: 360 u                                                  w: 30 u                  1.1e+03%
+       Pins:
+         g: X17/10                                                 g: XI3/XI10/U18_U82_gate
+         s: Ext_V_out                                              d: Ext_V_out
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+ 20    X17/X28/M0(795.665,420.910)  MN(NH)                       XI3/XI10/M19  MN(NH)
+       l: 0.4 u                                                  l: 0.5 u                      20%
+       w: 30 u                                                   w: 360 u                    91.7%
+       Pins:
+         g: X17/8                                                  g: XI3/XI10/U18_U74$11_gate
+         s: Vout                                                   d: Vout
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+
+
+**************************************************************************************************************
+                               INFORMATION AND WARNINGS
+**************************************************************************************************************
+
+
+                  Matched    Matched    Unmatched    Unmatched    Component
+                   Layout     Source       Layout       Source    Type
+                  -------    -------    ---------    ---------    ---------
+   Ports:              10         10            0            0
+
+   Nets:               34         34            0            0
+
+   Instances:           9          9            0            0    MN(N)
+                        8          8            0            0    MN(NH)
+                        4          4            0            0    MP(P)
+                        5          5            0            0    MP(PH)
+                        2          2            0            0    C(CB)
+                        4          4            0            0    C(CH)
+                        1          1            0            0    R(RC)
+                        3          3            0            0    R(RE)
+                       17         17            0            0    R(RW)
+                        2          2            0            0    D(P3)
+                        2          2            0            0    SMP2
+                        2          2            0            0    _sup2v
+                  -------    -------    ---------    ---------
+   Total Inst:         59         59            0            0
+
+
+o Statistics:
+
+   4 isolated layout nets were deleted.
+
+   224 layout mos transistors were reduced to 18.
+     206 mos transistors were deleted by parallel reduction.
+   224 source mos transistors were reduced to 18.
+     206 mos transistors were deleted by parallel reduction.
+
+   34 series layout resistors were reduced to 12.  22 connecting nets were deleted.
+   22 series source resistors were reduced to 11.  11 connecting nets were deleted.
+
+   114 parallel layout diodes were reduced to 2.
+   14 parallel source diodes were reduced to 2.
+
+   3 nets and 2 instances were matched arbitrarily.
+
+
+o Initial Correspondence Points:
+
+   Ports:        VDD VSS VDD0 VSS0 Vin2 Vin1 Vout Ext_V_Inp Ext_V_Inn Ext_V_out
+
+
+o Ambiguity Resolution Points:
+
+      (Each one of the following objects belongs to a group of indistinguishable objects.
+       The listed objects were matched arbitrarily by the Ambiguity Resolution feature of LVS.
+       Arbitrary matching may be prevented by assigning names to these objects or to adjacent nets).
+
+       Layout                                                    Source
+       ------                                                    ------
+
+                                     Nets
+                                     ----
+
+       10                                                        XI3/XI3/U33_U31_r2
+       15                                                        XI3/XI5/U31_U29_c2
+       X62/7                                                     XI3/XI5/U19_U22$11_gate
+
+
+                                   Instances
+                                   ---------
+
+       X15/X16/R0(147.755,312.410)  R(RW)                        XI3/XI8/R17  R(RW)
+       X16/X16/R0(147.755,407.410)  R(RW)                        XI3/XI10/R17  R(RW)
+
+
+
+o Matched Mosfets Which Have Been Unequally Reduced:
+
+       X17/X28/M0(795.665,420.910)                               XI3/XI10/M19
+       ** missing smashed mosfet **                              XI3/XI10/M30
+       ** missing smashed mosfet **                              XI3/XI10/M29
+       ** missing smashed mosfet **                              XI3/XI10/M28
+       ** missing smashed mosfet **                              XI3/XI10/M27
+       ** missing smashed mosfet **                              XI3/XI10/M26
+       ** missing smashed mosfet **                              XI3/XI10/M25
+       ** missing smashed mosfet **                              XI3/XI10/M24
+       ** missing smashed mosfet **                              XI3/XI10/M23
+       ** missing smashed mosfet **                              XI3/XI10/M22
+       ** missing smashed mosfet **                              XI3/XI10/M21
+       ** missing smashed mosfet **                              XI3/XI10/M20
+
+       X16/X28/M0(188.345,453.910)                               XI3/XI9/M19
+       ** missing smashed mosfet **                              XI3/XI9/M30
+       ** missing smashed mosfet **                              XI3/XI9/M29
+       ** missing smashed mosfet **                              XI3/XI9/M28
+       ** missing smashed mosfet **                              XI3/XI9/M27
+       ** missing smashed mosfet **                              XI3/XI9/M26
+       ** missing smashed mosfet **                              XI3/XI9/M25
+       ** missing smashed mosfet **                              XI3/XI9/M24
+       ** missing smashed mosfet **                              XI3/XI9/M23
+       ** missing smashed mosfet **                              XI3/XI9/M22
+       ** missing smashed mosfet **                              XI3/XI9/M21
+       ** missing smashed mosfet **                              XI3/XI9/M20
+
+       X15/X28/M0(188.345,358.910)                               XI3/XI8/M19
+       ** missing smashed mosfet **                              XI3/XI8/M30
+       ** missing smashed mosfet **                              XI3/XI8/M29
+       ** missing smashed mosfet **                              XI3/XI8/M28
+       ** missing smashed mosfet **                              XI3/XI8/M27
+       ** missing smashed mosfet **                              XI3/XI8/M26
+       ** missing smashed mosfet **                              XI3/XI8/M25
+       ** missing smashed mosfet **                              XI3/XI8/M24
+       ** missing smashed mosfet **                              XI3/XI8/M23
+       ** missing smashed mosfet **                              XI3/XI8/M22
+       ** missing smashed mosfet **                              XI3/XI8/M21
+       ** missing smashed mosfet **                              XI3/XI8/M20
+
+
+
+**************************************************************************************************************
+                                DETAILED ERROR ANALYSIS
+
+       LAYOUT NAME                                               SOURCE NAME
+**************************************************************************************************************
+
+          (This section contains detailed error analysis and suggestions for
+           fixing the layout errors).
+
+--------------------------------------------------------------------------------------------------------------
+                                Bad instance connections
+
+       X15/X27/M0(209.345,368.790)  MP(PH)                       XI3/XI8/M1  MP(PH)
+         g: X15/7                                                  g: XI3/XI8/U18_U79$3_gate
+         s: VDD0                                                   d: VDD0
+         b: VDD0                                                   b: VDD0
+         d: Ext_V_Inp                                              ** Ext_V_Inp **
+         ** Vin1 **                                                s: Vin1
+
+       X15/X28/M0(188.345,358.910)  MN(NH)                       XI3/XI8/M19  MN(NH)
+         g: X15/8                                                  g: XI3/XI8/U18_U74$11_gate
+         s: Vin1                                                   d: Vin1
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+ Pin d of LAYOUT instance X15/X27/M0(209.345,368.790)[MP(PH)] connects to net Ext_V_Inp instead of net Vin1
+ Pin d of LAYOUT instance X15/X28/M0(188.345,358.910)[MN(NH)] connects to net VSS instead of net VSS0
+ Pin b of LAYOUT instance X15/X28/M0(188.345,358.910)[MN(NH)] connects to net VSS instead of net VSS0
+ 
+--------------------------------------------------------------------------------------------------------------
+                                Bad instance connections
+
+       X16/X27/M0(209.345,463.790)  MP(PH)                       XI3/XI10/M1  MP(PH)
+         g: X16/7                                                  g: XI3/XI10/U18_U79$3_gate
+         s: VDD0                                                   d: VDD0
+         b: VDD0                                                   b: VDD0
+         d: Ext_V_Inn                                              ** Ext_V_Inn **
+         ** Vout **                                                s: Vout
+
+       X17/X28/M0(795.665,420.910)  MN(NH)                       XI3/XI10/M19  MN(NH)
+         g: X17/8                                                  g: XI3/XI10/U18_U74$11_gate
+         s: Vout                                                   d: Vout
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+ Pin d of LAYOUT instance X16/X27/M0(209.345,463.790)[MP(PH)] connects to net Ext_V_Inn instead of net Vout
+ Pin d of LAYOUT instance X17/X28/M0(795.665,420.910)[MN(NH)] connects to net VSS instead of net VSS0
+ Pin b of LAYOUT instance X17/X28/M0(795.665,420.910)[MN(NH)] connects to net VSS instead of net VSS0
+ 
+--------------------------------------------------------------------------------------------------------------
+                                  Pin connection error
+
+       X17/X27/M0(774.665,430.790)  MP(PH)                       XI3/XI9/M1  MP(PH)
+         g: X17/7                                                  g: XI3/XI9/U18_U79$3_gate
+         s: VDD0                                                   d: VDD0
+         b: VDD0                                                   b: VDD0
+         d: Ext_V_out                                              ** Ext_V_out **
+         ** Vin2 **                                                s: Vin2
+
+ Pin d of LAYOUT instance X17/X27/M0(774.665,430.790)[MP(PH)] connects to net Ext_V_out instead of net Vin2
+ 
+--------------------------------------------------------------------------------------------------------------
+                                   Net mismatch error
+
+ The following LAYOUT instances connect to net VSS instead of net VSS0
+ 
+       X16/X28/M0(188.345,453.910)  MN(NH)                       XI3/XI9/M19  MN(NH)
+         g: X16/8                                                  g: XI3/XI9/U18_U74$11_gate
+         s: Vin2                                                   d: Vin2
+         d: VSS                                                    ** VSS **
+         b: VSS                                                    ** VSS **
+         ** VSS0 **                                                s: VSS0
+         ** VSS0 **                                                b: VSS0
+
+       X15/R14(148.000,322.640)  R(RW)                           XI3/XI8/R16  R(RW)
+         neg: X15/8                                                pos: XI3/XI8/U18_U74$11_gate
+         pos: VSS                                                  ** VSS **
+         ** VSS0 **                                                neg: VSS0
+
+       X16/R14(148.000,417.640)  R(RW)                           XI3/XI9/R16  R(RW)
+         neg: X16/8                                                pos: XI3/XI9/U18_U74$11_gate
+         pos: VSS                                                  ** VSS **
+         ** VSS0 **                                                neg: VSS0
+
+       X17/R14(836.010,384.640)  R(RW)                           XI3/XI10/R16  R(RW)
+         neg: X17/8                                                pos: XI3/XI10/U18_U74$11_gate
+         pos: VSS                                                  ** VSS **
+         ** VSS0 **                                                neg: VSS0
+
+--------------------------------------------------------------------------------------------------------------
+                                   Net mismatch error
+
+ The following LAYOUT instances connect to net VSS0 instead of net VSS
+ 
+       X17/X19/X0/X0/M0(852.335,415.520)  MN(NH)                 XI3/XI10/M18  MN(NH)
+         g: X17/10                                                 g: XI3/XI10/U18_U82_gate
+         s: Ext_V_out                                              d: Ext_V_out
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+       X17/X15/R0(836.305,378.775)  R(RW)                        XI3/XI10/R15  R(RW)
+         pos: X17/10                                               pos: XI3/XI10/U18_U82_gate
+         neg: VSS0                                                 ** VSS0 **
+         ** VSS **                                                 neg: VSS
+
+       X16/X19/X0/X0/M0(131.675,448.520)  MN(NH)                 XI3/XI9/M18  MN(NH)
+         g: X16/10                                                 g: XI3/XI9/U18_U82_gate
+         s: Ext_V_Inn                                              d: Ext_V_Inn
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+       X16/X15/R0(147.705,411.775)  R(RW)                        XI3/XI9/R15  R(RW)
+         pos: X16/10                                               pos: XI3/XI9/U18_U82_gate
+         neg: VSS0                                                 ** VSS0 **
+         ** VSS **                                                 neg: VSS
+
+       X15/X19/X0/X0/M0(131.675,353.520)  MN(NH)                 XI3/XI8/M18  MN(NH)
+         g: X15/10                                                 g: XI3/XI8/U18_U82_gate
+         s: Ext_V_Inp                                              d: Ext_V_Inp
+         d: VSS0                                                   ** VSS0 **
+         b: VSS0                                                   ** VSS0 **
+         ** VSS **                                                 s: VSS
+         ** VSS **                                                 b: VSS
+
+       X15/X15/R0(147.705,316.775)  R(RW)                        XI3/XI8/R15  R(RW)
+         pos: X15/10                                               pos: XI3/XI8/U18_U82_gate
+         neg: VSS0                                                 ** VSS0 **
+         ** VSS **                                                 neg: VSS
+
+
+**************************************************************************************************************
+                                         SUMMARY
+**************************************************************************************************************
+
+Total CPU Time:      0 sec
+Total Elapsed Time:  0 sec

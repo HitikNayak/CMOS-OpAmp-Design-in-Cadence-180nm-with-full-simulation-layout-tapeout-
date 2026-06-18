@@ -1,0 +1,130 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Core_with_IOpad_opamp
+* Top Cell Name: core_with_IO
+* View Name:     schematic
+* Netlisted on:  May 26 14:02:12 2026
+************************************************************************
+
+.INCLUDE  /home/project_staff/projects/test_proj/cds_master/SCLSL18_6M1L/ts018_scl_prim/cdlNetlist.header
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: OpAmpFinal
+* Cell Name:    OpAmpSchematic
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT OpAmpSchematic Vdd Vin1 Vin2 Vout Vss
+*.PININFO Vin1:I Vin2:I Vout:O Vdd:B Vss:B
+MM17 Vout net1 Vdd Vdd P W=6.0 L=0.73 m=1.0
+MM29 net49 net1 Vdd Vdd P W=0.24 L=0.24 m=1.0
+MM30 net48 net1 Vdd Vdd P W=0.24 L=0.24 m=1.0
+MM28 net1 net1 net49 Vdd P W=0.24 L=0.24 m=20.0
+MM27 net12 net1 net48 Vdd P W=0.24 L=0.24 m=20.0
+MM8 net43 Vin2 net45 Vdd P W=1.2 L=0.23 m=1.0
+MM9 net47 Vin1 net45 Vdd P W=1.2 L=0.23 m=1.0
+MM10 net45 net1 Vdd Vdd P W=4.0 L=0.98 m=1.0
+MM3 net2 Vin1 net47 Vdd P W=0.3 L=0.6 m=1.0
+MM2 net42 Vin2 net43 Vdd P W=0.3 L=0.6 m=1.0
+MM22 net44 net12 Vss Vss N W=0.6 L=0.24 m=1.0
+MM23 net12 net12 Vss Vss N W=0.24 L=0.24 m=1.0
+MM26 net1 net44 net12 Vss N W=0.6 L=0.24 m=1.0
+MM25 net1 net12 net41 Vss N W=0.24 L=0.24 m=10.0
+MM5 net2 net42 Vss Vss N W=8.4 L=0.73 m=1.0
+MM6 net42 net42 Vss Vss N W=8.4 L=0.73 m=1.0
+MM1 Vout net2 Vss Vss N W=6.0 L=0.53 m=6.0
+CC2 Vdd net44 $[CB] w=22.0 l=44.785 c=999.9627f m=1
+CC1 Vout net2 $[CB] w=10.41 l=28.0 c=299.9302f m=1
+RR0 net41 Vss 5M $[RC] $W=0.18 $L=615.78
+.ENDS
+
+************************************************************************
+* Library Name: cio150
+* Cell Name:    pvda
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pvda VDD VDDO VSS VSSO
+*.PININFO VDD:B VDDO:B VSS:B VSSO:B
+.ENDS
+
+************************************************************************
+* Library Name: cio150
+* Cell Name:    pv0a
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pv0a VDD VDDO VSS VSSO
+*.PININFO VDD:B VDDO:B VSS:B VSSO:B
+.ENDS
+
+************************************************************************
+* Library Name: cio150
+* Cell Name:    pc3d00
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pc3d00 PAD PADR VDD VDD0 VSS VSS0
+*.PININFO PAD:B PADR:B VDD:B VDD0:B VSS:B VSS0:B
+.ENDS
+
+************************************************************************
+* Library Name: cio150
+* Cell Name:    pvdi
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pvdi VDD VDDO VSS VSSO
+*.PININFO VDD:B VDDO:B VSS:B VSSO:B
+.ENDS
+
+************************************************************************
+* Library Name: cio150
+* Cell Name:    pv0i
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pv0i VDD VDD0 VSS VSS0
+*.PININFO VDD:B VDD0:B VSS:B VSS0:B
+.ENDS
+
+************************************************************************
+* Library Name: IO_Pad_Ring_for_two_Stage_Opamp_new
+* Cell Name:    io_pad
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT io_pad Ext_V_Inn Ext_V_Inp Ext_V_out VDD VDD0 VSS VSS0 V_Inn V_Inp 
++ V_out
+*.PININFO Ext_V_Inn:B Ext_V_Inp:B Ext_V_out:B VDD:B VDD0:B VSS:B VSS0:B 
+*.PININFO V_Inn:B V_Inp:B V_out:B
+XI4 VDD VDD0 VSS VSS0 / pvda
+XI5 VDD VDD0 VSS VSS0 / pv0a
+XI9 V_Inn Ext_V_Inn VDD VDD0 VSS VSS0 / pc3d00
+XI8 V_Inp Ext_V_Inp VDD VDD0 VSS VSS0 / pc3d00
+XI10 V_out Ext_V_out VDD VDD0 VSS VSS0 / pc3d00
+XI0 VDD VDD0 VSS VSS0 / pvdi
+XI3 VDD VDD0 VSS VSS0 / pv0i
+.ENDS
+
+************************************************************************
+* Library Name: Core_with_IOpad_opamp
+* Cell Name:    core_with_IO
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT core_with_IO Ext_V_Inn Ext_V_Inp Ext_V_out VDD VDD0 VSS VSS0 Vin1 Vin2 
++ Vout
+*.PININFO Ext_V_Inn:B Ext_V_Inp:B Ext_V_out:B VDD:B VDD0:B VSS:B VSS0:B Vin1:B 
+*.PININFO Vin2:B Vout:B
+XI0 VDD Vin1 Vin2 Vout VSS / OpAmpSchematic
+XI3 Ext_V_Inn Ext_V_Inp Ext_V_out VDD VDD0 VSS VSS0 Vin2 Vin1 Vout / io_pad
+.ENDS
+

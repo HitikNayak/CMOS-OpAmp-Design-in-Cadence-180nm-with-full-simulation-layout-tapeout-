@@ -1,0 +1,340 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Core_with_IOpad_opamp
+* Top Cell Name: core_with_IO
+* View Name:     schematic
+* Netlisted on:  May 25 19:58:43 2026
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 0 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: OpAmpFinal
+* Cell Name:    OpAmpSchematic
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT OpAmpSchematic Vdd Vin1 Vin2 Vout Vss
+*.PININFO Vin1:I Vin2:I Vout:O Vdd:B Vss:B
+MM17 Vout net1 Vdd Vdd P W=6.0 L=0.73 m=1.0
+MM29 net49 net1 Vdd Vdd P W=0.24 L=0.24 m=1.0
+MM30 net48 net1 Vdd Vdd P W=0.24 L=0.24 m=1.0
+MM28 net1 net1 net49 Vdd P W=0.24 L=0.24 m=20.0
+MM27 net12 net1 net48 Vdd P W=0.24 L=0.24 m=20.0
+MM8 net43 Vin2 net45 Vdd P W=1.2 L=0.23 m=1.0
+MM9 net47 Vin1 net45 Vdd P W=1.2 L=0.23 m=1.0
+MM10 net45 net1 Vdd Vdd P W=4.0 L=0.98 m=1.0
+MM3 net2 Vin1 net47 Vdd P W=0.3 L=0.6 m=1.0
+MM2 net42 Vin2 net43 Vdd P W=0.3 L=0.6 m=1.0
+MM22 net44 net12 Vss Vss N W=0.6 L=0.24 m=1.0
+MM23 net12 net12 Vss Vss N W=0.24 L=0.24 m=1.0
+MM26 net1 net44 net12 Vss N W=0.6 L=0.24 m=1.0
+MM25 net1 net12 net41 Vss N W=0.24 L=0.24 m=10.0
+MM5 net2 net42 Vss Vss N W=8.4 L=0.73 m=1.0
+MM6 net42 net42 Vss Vss N W=8.4 L=0.73 m=1.0
+MM1 Vout net2 Vss Vss N W=6.0 L=0.53 m=6.0
+CC2 Vdd net44 $[CB] w=22.0 l=44.785 c=999.9627f m=1
+CC1 Vout net2 $[CB] w=10.41 l=28.0 c=299.9302f m=1
+RR0 net41 Vss 5M $[RC] $W=0.18 $L=615.78
+.ENDS
+
+************************************************************************
+* Library Name: cio150
+* Cell Name:    pvda
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pvda VDDO VDD VSS VSSO 
+C3_5    VDDO    U30_U29_c2 L= 15.13U W=15.13U $[CH]
+M4      VDDO    U30_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M5      VDDO    U30_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M6      VDDO    U30_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M7      VDDO    U30_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M8      VDDO    U30_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M9      VDDO    U30_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M10     VDDO    U30_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M11     VDDO    U30_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M12     VDDO    U30_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M13     VDDO    U30_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M14     VDDO    U30_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M15     VDDO    U30_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M16     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M17     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M18     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M19     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M20     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M21     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M22     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M23     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M24     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M25     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M26     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M27     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+D30     VSS     VSSO    P3  119.7900P 257.5800U 
+D31     VSSO    VSS     P3  119.7900P 257.5800U 
+R2      U30_U29_c2 U30_U18_r2 8.2500K $[RW]  W=2.1U L=14.6U
+R3      U30_U18_r2 VSSO    8.2500K $[RW]  W=2.1U L=14.6U
+R28     VDDO    U19_U18_r2 8.2500K $[RW]  W=2.1U L=14.6U
+R29     U19_U18_r2 U19_U22$11_gate 8.2500K $[RW]  W=2.1U L=14.6U
+
+.ENDS pvda
+
+************************************************************************
+* Library Name: cio150
+* Cell Name:    pv0a
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pv0a VSSO VDD VSS VDDO 
+C4_5    VDDO    U31_U29_c2 L= 15.13U W=15.13U $[CH]
+M4      VDDO    U31_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M5      VDDO    U31_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M6      VDDO    U31_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M7      VDDO    U31_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M8      VDDO    U31_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M9      VDDO    U31_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M10     VDDO    U31_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M11     VDDO    U31_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M12     VDDO    U31_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M13     VDDO    U31_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M14     VDDO    U31_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M15     VDDO    U31_U29_c2 VSSO    VSSO    NH   L=.4000U  W=30.0000U  
+M16     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M17     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M18     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M19     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M20     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M21     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M22     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M23     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M24     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M25     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M26     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+M27     VSSO    U19_U22$11_gate VDDO    VDDO    PH   L=.4000U  
++  W=40.0000U  
+D30     VSS     VSSO    P3  119.7900P 257.5800U 
+D31     VSSO    VSS     P3  119.7900P 257.5800U 
+R2      U31_U29_c2 U31_U18_r2 8.2500K $[RW]  W=2.1U L=14.6U
+R3      U31_U18_r2 VSSO    8.2500K $[RW]  W=2.1U L=14.6U
+R28     VDDO    U19_U18_r2 8.2500K $[RW]  W=2.1U L=14.6U
+R29     U19_U18_r2 U19_U22$11_gate 8.2500K $[RW]  W=2.1U L=14.6U
+
+.ENDS pv0a
+
+************************************************************************
+* Library Name: cio150
+* Cell Name:    pc3d00
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pc3d00 PAD PADR VDD VSS VDDO VSSO 
+M1      VDDO    U18_U79$3_gate PAD     VDDO    PH   L=.4000U  
++  W=52.0000U  
+M2      VDDO    U18_U79$3_gate PAD     VDDO    PH   L=.4000U  
++  W=52.0000U  
+M3      VDDO    U18_U79$3_gate PAD     VDDO    PH   L=.4000U  
++  W=52.0000U  
+M4      VDDO    U18_U79$3_gate PAD     VDDO    PH   L=.4000U  
++  W=52.0000U  
+M5      VDDO    U18_U79$3_gate PAD     VDDO    PH   L=.4000U  
++  W=52.0000U  
+M6      VDDO    U18_U79$3_gate PAD     VDDO    PH   L=.4000U  
++  W=52.0000U  
+M7      VDDO    U18_U79$3_gate PAD     VDDO    PH   L=.4000U  
++  W=52.0000U  
+M8      VDDO    U18_U79$3_gate PAD     VDDO    PH   L=.4000U  
++  W=52.0000U  
+M9      VDDO    U18_U79$3_gate PAD     VDDO    PH   L=.4000U  
++  W=52.0000U  
+M10     VDDO    U18_U79$3_gate PAD     VDDO    PH   L=.4000U  
++  W=52.0000U  
+M11     VDDO    U18_U79$3_gate PAD     VDDO    PH   L=.4000U  
++  W=52.0000U  
+M12     VDDO    U18_U79$3_gate PAD     VDDO    PH   L=.4000U  
++  W=52.0000U  
+M18     PADR    U18_U82_gate VSS     VSS     NH   L=.4000U  W=30.0000U 
++   
+M19     PAD     U18_U74$11_gate VSSO    VSSO    NH   L=.5000U  
++  W=30.0000U  
+M20     PAD     U18_U74$11_gate VSSO    VSSO    NH   L=.5000U  
++  W=30.0000U  
+M21     PAD     U18_U74$11_gate VSSO    VSSO    NH   L=.5000U  
++  W=30.0000U  
+M22     PAD     U18_U74$11_gate VSSO    VSSO    NH   L=.5000U  
++  W=30.0000U  
+M23     PAD     U18_U74$11_gate VSSO    VSSO    NH   L=.5000U  
++  W=30.0000U  
+M24     PAD     U18_U74$11_gate VSSO    VSSO    NH   L=.5000U  
++  W=30.0000U  
+M25     PAD     U18_U74$11_gate VSSO    VSSO    NH   L=.5000U  
++  W=30.0000U  
+M26     PAD     U18_U74$11_gate VSSO    VSSO    NH   L=.5000U  
++  W=30.0000U  
+M27     PAD     U18_U74$11_gate VSSO    VSSO    NH   L=.5000U  
++  W=30.0000U  
+M28     PAD     U18_U74$11_gate VSSO    VSSO    NH   L=.5000U  
++  W=30.0000U  
+M29     PAD     U18_U74$11_gate VSSO    VSSO    NH   L=.5000U  
++  W=30.0000U  
+M30     PAD     U18_U74$11_gate VSSO    VSSO    NH   L=.5000U  
++  W=30.0000U  
+D31     VSSO    VSS     P3  93.1700P 200.3400U 
+D32     VSS     VSSO    P3  93.1700P 200.3400U 
+R13     U18_U13_r1 PADR      302.0000 $[RE] W=4U L=2.5U
+R14     PAD     U18_U13_r1   302.0000 $[RE] W=4U L=2.5U
+R15     U18_U82_gate VSS       1.1900K $[RW] W=2.1U L=2.1U
+R16     U18_U74$11_gate VSSO      4.8910K $[RW]  W=2.1U L=8.65U
+R17     VDDO    U18_U79$3_gate   4.8910K $[RW] W=2.1U L=8.65U
+
+.ENDS pc3d00
+
+************************************************************************
+* Library Name: cio150
+* Cell Name:    pvdi
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pvdi VDD VSS VDDO VSSO 
+C8_1    VDD U31_U18_r1     L= 15.13U W=15.13U $[CH]
+M3      VSS     U32_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M4      VSS     U32_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M5      VSS     U32_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M6      VSS     U32_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M7      VSS     U32_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M8      VSS     U32_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M9      VSS     U32_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M10     VSS     U32_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M11     VSS     U32_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M12     VSS     U32_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M13     VSS     U32_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M14     VSS     U32_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M18     VDD     U31_U18_r1 VSSO    VSSO   N   L=.2500U  W=30.0000U  
+M19     VDD     U31_U18_r1 VSSO    VSSO   N   L=.2500U  W=30.0000U  
+M20     VDD     U31_U18_r1 VSSO    VSSO   N   L=.2500U  W=30.0000U  
+M21     VDD     U31_U18_r1 VSSO    VSSO   N   L=.2500U  W=30.0000U  
+M22     VDD     U31_U18_r1 VSSO    VSSO   N   L=.2500U  W=30.0000U  
+M23     VDD     U31_U18_r1 VSSO    VSSO   N   L=.2500U  W=30.0000U  
+M24     VDD     U31_U18_r1 VSSO    VSSO   N   L=.2500U  W=30.0000U  
+M25     VDD     U31_U18_r1 VSSO    VSSO   N   L=.2500U  W=30.0000U  
+M26     VDD     U31_U18_r1 VSSO    VSSO   N   L=.2500U  W=30.0000U  
+M27     VDD     U31_U18_r1 VSSO    VSSO   N   L=.2500U  W=30.0000U  
+M28     VDD     U31_U18_r1 VSSO    VSSO   N   L=.2500U  W=30.0000U  
+M29     VDD     U31_U18_r1 VSSO    VSSO   N   L=.2500U  W=30.0000U  
+D30     VSSO    VSS     P3  119.7900P 257.5800U 
+D31     VSS     VSSO    P3  119.7900P 257.5800U 
+R1      U32_U31_r1 U32_U31_r2   8.2500K $[RW] W=2.1U L=14.6U
+R2      VDD     U32_U31_r1   8.2500K $[RW] W=2.1U L=14.6U
+R15     U31_U31_r1 VSS       8.2500K $[RW]  W=2.1U L=14.6U
+R16     U31_U18_r1 U31_U31_r1   8.2500K $[RW] W=2.1U L=14.6U
+
+.ENDS pvdi
+
+************************************************************************
+* Library Name: cio150
+* Cell Name:    pv0i
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pv0i VSS VDD VDDO VSSO 
+C8_1    VDD U31_U18_r1     L= 15.13U W=15.13U $[CH]
+M3      VSS     U33_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M4      VSS     U33_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M5      VSS     U33_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M6      VSS     U33_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M7      VSS     U33_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M8      VSS     U33_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M9      VSS     U33_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M10     VSS     U33_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M11     VSS     U33_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M12     VSS     U33_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M13     VSS     U33_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M14     VSS     U33_U31_r2 VDD     VDD    P   L=.2500U  W=40.0000U  
+M18     VDD     U31_U18_r1 VSS     VSS    N   L=.2500U  W=30.0000U  
+M19     VDD     U31_U18_r1 VSS     VSS    N   L=.2500U  W=30.0000U  
+M20     VDD     U31_U18_r1 VSS     VSS    N   L=.2500U  W=30.0000U  
+M21     VDD     U31_U18_r1 VSS     VSS    N   L=.2500U  W=30.0000U  
+M22     VDD     U31_U18_r1 VSS     VSS    N   L=.2500U  W=30.0000U  
+M23     VDD     U31_U18_r1 VSS     VSS    N   L=.2500U  W=30.0000U  
+M24     VDD     U31_U18_r1 VSS     VSS    N   L=.2500U  W=30.0000U  
+M25     VDD     U31_U18_r1 VSS     VSS    N   L=.2500U  W=30.0000U  
+M26     VDD     U31_U18_r1 VSS     VSS    N   L=.2500U  W=30.0000U  
+M27     VDD     U31_U18_r1 VSS     VSS    N   L=.2500U  W=30.0000U  
+M28     VDD     U31_U18_r1 VSS     VSS    N   L=.2500U  W=30.0000U  
+M29     VDD     U31_U18_r1 VSS     VSS    N   L=.2500U  W=30.0000U  
+D30     VSSO    VSS     P3  119.7900P 257.5800U 
+D31     VSS     VSSO    P3  119.7900P 257.5800U 
+R1      U33_U31_r1 U33_U31_r2   8.2500K $[RW] W=2.1U L=14.6U
+R2      VDD     U33_U31_r1   8.2500K $[RW] W=2.1U L=14.6U
+R15     U31_U31_r1 VSS       8.2500K $[RW] W=2.1U L=14.6U
+R16     U31_U18_r1 U31_U31_r1   8.2500K $[RW] W=2.1U L=14.6U
+
+.ENDS pv0i
+
+************************************************************************
+* Library Name: IO_Pad_Ring_for_two_Stage_Opamp_new
+* Cell Name:    io_pad
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT io_pad Ext_V_Inn Ext_V_Inp Ext_V_out VDD VDD0 VSS VSS0 V_Inn V_Inp 
++ V_out
+*.PININFO Ext_V_Inn:B Ext_V_Inp:B Ext_V_out:B VDD:B VDD0:B VSS:B VSS0:B 
+*.PININFO V_Inn:B V_Inp:B V_out:B
+XI4 VDD VDD0 VSS VSS0 / pvda
+XI5 VDD VDD0 VSS VSS0 / pv0a
+XI9 V_Inn Ext_V_Inn VDD VDD0 VSS VSS0 / pc3d00
+XI8 V_Inp Ext_V_Inp VDD VDD0 VSS VSS0 / pc3d00
+XI10 V_out Ext_V_out VDD VDD0 VSS VSS0 / pc3d00
+XI0 VDD VDD0 VSS VSS0 / pvdi
+XI3 VDD VDD0 VSS VSS0 / pv0i
+.ENDS
+
+************************************************************************
+* Library Name: Core_with_IOpad_opamp
+* Cell Name:    core_with_IO
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT core_with_IO Ext_V_Inn Ext_V_Inp Ext_V_out VDD VDD0 VSS VSS0 Vin1 Vin2 
++ Vout
+*.PININFO Ext_V_Inn:B Ext_V_Inp:B Ext_V_out:B VDD:B VDD0:B VSS:B VSS0:B Vin1:B 
+*.PININFO Vin2:B Vout:B
+XI0 VDD Vin1 Vin2 Vout VSS / OpAmpSchematic
+XI3 Ext_V_Inn Ext_V_Inp Ext_V_out VDD VDD0 VSS VSS0 Vin2 Vin1 Vout / io_pad
+.ENDS
+
